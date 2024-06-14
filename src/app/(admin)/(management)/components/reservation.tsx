@@ -19,7 +19,6 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
@@ -64,7 +63,7 @@ export function DataTableDemoh() {
                 }));
             } catch {
                 toast({
-                    description: "Nous ne pouvons pas récupérer les vols.",
+                    description: "Nous ne pouvons pas récupérer les hotels.",
                     title: "Erreur de connexion",
                     variant: "destructive",
                 });
@@ -162,7 +161,7 @@ export function DataTableDemoh() {
                     <SearchIcon className="absolute ml-9 mt-2 font-thin" />
                     <Input
                         placeholder="Search"
-                        value={(table.getColumn("Hotel")?.getFilterValue() as string) ?? ""}
+                        value={term}
                         onChange={(e) => setTerm(e.target.value)}
                         className=" pr-3 pl-12 rounded-[30px] w-[900px] ml-5 mr-7"
                     />
@@ -210,6 +209,26 @@ export function DataTableDemoh() {
                                 )}
                         </TableBody>
                     </Table>
+                </div>
+            </div>
+            <div className="w-full flex items-center justify-center">
+                <div className="space-x-2">
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => table.previousPage()}
+                        disabled={!table.getCanPreviousPage()}
+                    >
+                        Previous
+                    </Button>
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => table.nextPage()}
+                        disabled={!table.getCanNextPage()}
+                    >
+                        Next
+                    </Button>
                 </div>
             </div>
         </div>

@@ -32,6 +32,9 @@ export const endpoints = {
     // flights
     flights: 'administrateur/voles-list',
     createFlight: 'administrateur/add-vole',
-    users: (params: URLSearchParams) => `users?${params.toString()}`,
-    assignPrivilege: "user/privilege",
+    // hotels
+    hotels: "administrateur/hotels-list",
+    // hodjadj
+    getHodjadj: 'bookings/hodjadj',
+    assignHadj: 'bookings/haaj',
 }

@@ -87,7 +87,7 @@ const InscriptionPage2 = () => {
                     </div>
                     <div className="w-10">
                         <label htmlFor="DEP" className="mb-1.5 block text-left text-sm w-40 mt-[1.8px]">  Date d’expiration </label>
-                        <input name="dateExpirationPassport" value={dateExpirationPassport} onChange={handleInputChange2} className="py-4 border-gray-100 shadow-md focus:border-blue w-[340px] h-7 rounded-lg border p-2 text-left text-slate-500 focus:outline-[#EBA565]" type="date" placeholder="Date d’expiration" id="DEP" required />
+                        <input name="dateExpirationPassport" value={dateExpirationPassport} onChange={handleInputChange} className="py-4 border-gray-100 shadow-md focus:border-blue w-[340px] h-7 rounded-lg border p-2 text-left text-slate-500 focus:outline-[#EBA565]" type="date" placeholder="Date d’expiration" id="DEP" required />
                     </div>
                 </div>
                 <div className="flex justify-center space-x-[400px] mr-[710px] mb-6">
